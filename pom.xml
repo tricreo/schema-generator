@@ -3,9 +3,20 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>jp.tricreo</groupId>
 	<artifactId>schema-generator</artifactId>
+	<name>Schema Generator</name>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<!-- ビルドの設定 -->
+	<url>http://earth.tricreo.jp/maven2-site/${project.artifactId}/${project.version}/</url>
+	<scm>
+		<connection>scm:git:git@github.com:tricreo/schema-generator.git</connection>
+		<developerConnection>scm:git:git@github.com:tricreo/schema-generator.git</developerConnection>
+		<url>scm:git:git@github.com:tricreo/schema-generator.git</url>
+	</scm>
+	<organization>
+		<name>TRICREO, Inc.</name>
+		<url>http://tricreo.jp/</url>
+	</organization>
 	<build>
 		<defaultGoal>validate</defaultGoal>
 		<sourceDirectory>src/main/java</sourceDirectory>
