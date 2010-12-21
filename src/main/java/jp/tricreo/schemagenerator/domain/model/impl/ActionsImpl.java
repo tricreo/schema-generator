@@ -105,7 +105,10 @@ public class ActionsImpl implements Actions {
 			CloseableUtil.close(connection);
 		}
 	}
-	
+	/**
+	 * {@inheritDoc}
+	 * {@link Action}をクローンした{@link List}を返す。
+	 */
 	@Override
 	public List<Action<?>> getActions() {
 		// Listは可変オブジェクトなのでクローンする。
