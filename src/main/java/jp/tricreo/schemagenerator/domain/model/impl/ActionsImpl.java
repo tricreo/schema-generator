@@ -23,7 +23,9 @@ import org.slf4j.LoggerFactory;
 /**
  * {@link Actions}の実装クラス。
  * 
- * <p>不変オブジェクト版のエンティティ</p>
+ * <p>不変オブジェクト版のエンティティ。
+ * {@code dataSource}と{@code actions}は可変オブジェクトなので
+ * clone戦略を採用している。</p>
  * 
  * @author junichi
  */
