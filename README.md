@@ -1,6 +1,12 @@
 Schema Generator Application
 ==================
 
+How to build
+-----------
+
+Require: Java 1.5+, Maven2
+
+
 How to use
 ----------
 
