@@ -9,7 +9,7 @@
 	<groupId>jp.tricreo</groupId>
 	<artifactId>schema-generator</artifactId>
 	<name>Schema Generator</name>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
 	<!-- ビルドの設定 -->
 	<url>http://earth.tricreo.jp/maven2-site/${project.artifactId}/${project.version}/</url>
@@ -94,4 +94,18 @@
 			<version>1.0</version>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+		<repository>
+			<id>earth.tricreo.jp</id>
+			<url>scp://earth.tricreo.jp/var/www/earth.tricreo.jp/maven2</url>
+		</repository>
+		<snapshotRepository>
+			<id>earth.tricreo.jp</id>
+			<url>scp://earth.tricreo.jp/var/www/earth.tricreo.jp/maven2-snapshot</url>
+		</snapshotRepository>
+		<site>
+			<id>earth.tricreo.jp</id>
+			<url>scp://earth.tricreo.jp/var/www/earth.tricreo.jp/maven2-site/${project.artifactId}/${project.version}</url>
+		</site>
+	</distributionManagement>
 </project>
