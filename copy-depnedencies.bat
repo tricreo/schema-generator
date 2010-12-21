@@ -1,1 +1,1 @@
-mvn dependency:copy-dependencies -DoutputDirectory=bin/lib
+call mvn dependency:copy-dependencies -DoutputDirectory=bin/lib

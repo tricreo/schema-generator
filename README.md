@@ -4,7 +4,10 @@ Schema Generator Application
 How to build
 -----------
 
-Require: Java 1.5+, Maven2
+Required Environment : Java 1.5+, Maven2
+
+$ mvn clean package
+$ cp target/
 
 
 How to use
