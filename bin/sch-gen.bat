@@ -1,5 +1,5 @@
 @echo off
-java -Dlogback.configurationFile=./logback.xml -classpath .;.\lib\* schemagenerator.application.Application %1
+java -Dlogback.configurationFile=./logback.xml -classpath .;.\lib\* jp.tricreo.schemagenerator.application.Application %1
 
 
 
