@@ -49,6 +49,13 @@
 			</plugin>
 		</plugins>
 	</build>
+	<repositories>
+		<repository>
+			<id>jiemamy.org-release</id>
+			<name>Jiemamy Repository</name>
+			<url>http://maven.jiemamy.org/release</url>
+		</repository>
+	</repositories>
 	<!-- jarへの依存関係 -->
 	<dependencies>
 		<!-- JUnit -->
