@@ -12,7 +12,7 @@ import java.io.File;
 import java.net.URISyntaxException;
 import java.util.ListIterator;
 
-import jp.tricreo.schemagenerator.domain.lifecycle.repository.DataSourceRespository;
+import jp.tricreo.schemagenerator.domain.lifecycle.repository.DataSourceRepository;
 import jp.tricreo.schemagenerator.domain.model.Actions;
 import jp.tricreo.schemagenerator.domain.model.DataSource;
 
@@ -41,8 +41,8 @@ public class ActionsRepositoryInPropertiesTest {
 		String identity = "test1";
 		dataSource = spy(new DataSource("test1"));
 		
-		DataSourceRespository dataSourceRepository =
-				mock(DataSourceRespository.class);
+		DataSourceRepository dataSourceRepository =
+				mock(DataSourceRepository.class);
 		when(dataSourceRepository.findById(identity)).thenReturn(dataSource);
 		
 		File file =

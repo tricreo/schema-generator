@@ -7,7 +7,7 @@ import static org.junit.Assert.assertThat;
 import java.io.File;
 import java.net.URISyntaxException;
 
-import jp.tricreo.schemagenerator.domain.lifecycle.repository.DataSourceRespository;
+import jp.tricreo.schemagenerator.domain.lifecycle.repository.DataSourceRepository;
 import jp.tricreo.schemagenerator.domain.model.DataSource;
 
 import org.junit.Test;
@@ -32,7 +32,7 @@ public class DataSourceRepositoryInPropertiesTest {
 	 */
 	@Test
 	public void test01_リポジトリからすべてのデータソースが読み込めること() throws URISyntaxException {
-		DataSourceRespository repository =
+		DataSourceRepository repository =
 				new DataSourceRepositoryInProperties(getConfigFilePath());
 		for (DataSource dataSource : repository.findAll()) {
 			if (dataSource.getIdentity().equals("test1")) {
@@ -60,7 +60,7 @@ public class DataSourceRepositoryInPropertiesTest {
 	 */
 	@Test
 	public void test02_リポジトリから指定したデータソースが読み込めること() throws URISyntaxException {
-		DataSourceRespository repository =
+		DataSourceRepository repository =
 				new DataSourceRepositoryInProperties(getConfigFilePath());
 		DataSource dataSource = repository.findById("test1");
 		assertThat(dataSource, is(notNullValue()));

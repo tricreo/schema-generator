@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Properties;
 
-import jp.tricreo.schemagenerator.domain.lifecycle.repository.DataSourceRespository;
+import jp.tricreo.schemagenerator.domain.lifecycle.repository.DataSourceRepository;
 import jp.tricreo.schemagenerator.domain.model.DataSource;
 import jp.tricreo.schemagenerator.exception.FileNotFoundRuntimeException;
 import jp.tricreo.schemagenerator.exception.IORuntimeException;
@@ -42,7 +42,7 @@ import org.apache.commons.lang.Validate;
  * @author junichi
  */
 public class DataSourceRepositoryInProperties extends
-		AbstractRepositoryInProperties implements DataSourceRespository {
+		AbstractRepositoryInProperties implements DataSourceRepository {
 	
 	private final String fileName;
 	

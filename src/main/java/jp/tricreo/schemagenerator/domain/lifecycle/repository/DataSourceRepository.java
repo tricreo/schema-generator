@@ -25,6 +25,6 @@ import jp.tricreo.schemagenerator.domain.model.DataSource;
  * 
  * @author junichi
  */
-public interface DataSourceRespository extends Repository<DataSource, String> {
+public interface DataSourceRepository extends Repository<DataSource, String> {
 	
 }

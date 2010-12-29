@@ -23,15 +23,15 @@ import jp.tricreo.schemagenerator.domain.lifecycle.factory.ActionsFactory;
 import jp.tricreo.schemagenerator.domain.lifecycle.factory.impl.ActionFactoryImpl;
 import jp.tricreo.schemagenerator.domain.lifecycle.factory.impl.ActionsFactoryImpl;
 import jp.tricreo.schemagenerator.domain.lifecycle.repository.ActionsRepository;
-import jp.tricreo.schemagenerator.domain.lifecycle.repository.DataSourceRespository;
+import jp.tricreo.schemagenerator.domain.lifecycle.repository.DataSourceRepository;
 import jp.tricreo.schemagenerator.domain.model.Action;
 import jp.tricreo.schemagenerator.domain.model.Actions;
 import jp.tricreo.schemagenerator.domain.model.DataSource;
 import jp.tricreo.schemagenerator.domain.model.impl.DataSourceConnectServiceImpl;
 
-import com.google.common.collect.Lists;
-
 import org.apache.commons.lang.Validate;
+
+import com.google.common.collect.Lists;
 
 /**
  * {@link Actions}のためのリポジトリの実装クラス。
@@ -48,7 +48,7 @@ public class ActionsRepositoryInProperties extends
 	
 	private final String fileName;
 	
-	private final DataSourceRespository dataSourceRespository;
+	private final DataSourceRepository dataSourceRepository;
 	
 	private final ActionFactory actionFactory = new ActionFactoryImpl();
 	
@@ -59,14 +59,14 @@ public class ActionsRepositoryInProperties extends
 	 * インスタンスを生成する。
 	 * 
 	 * @param fileName ファイル名
-	 * @param dataSourceRespository {@link DataSourceRespository}
+	 * @param dataSourceRepository {@link DataSourceRepository}
 	 */
 	public ActionsRepositoryInProperties(String fileName,
-			DataSourceRespository dataSourceRespository) {
+			DataSourceRepository dataSourceRepository) {
 		Validate.notNull(fileName);
-		Validate.notNull(dataSourceRespository);
+		Validate.notNull(dataSourceRepository);
 		this.fileName = fileName;
-		this.dataSourceRespository = dataSourceRespository;
+		this.dataSourceRepository = dataSourceRepository;
 	}
 	
 	@Override
@@ -100,7 +100,7 @@ public class ActionsRepositoryInProperties extends
 		String dataSourceId =
 				properties.getProperty(String.format("actions.%s.dataSource",
 						identitiy));
-		DataSource dataSource = dataSourceRespository.findById(dataSourceId);
+		DataSource dataSource = dataSourceRepository.findById(dataSourceId);
 		int actionSize =
 				Integer.valueOf(properties.getProperty(String.format(
 						"actions.%s.action.size", identitiy)));
